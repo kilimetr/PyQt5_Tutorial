@@ -51,7 +51,7 @@ class Window(QtWidgets.QMainWindow):
 		self.vypoctiButton.clicked.connect(self.vypocti)
 
 	def vypocti(self):
-		vysledek = ""
+		vysledek = "";
 		chyba = ""
 
 		try:
@@ -59,22 +59,21 @@ class Window(QtWidgets.QMainWindow):
 			cislo2 = float(self.cislo2Edit.text())
 			operator = self.operatorComboBox.currentText()
 
-			if operator == "+":
+			if (operator == "+"):
 				vysledek = cislo1 + cislo2
-			elif oeprator == "-":
+			elif (operator == "-"):
 				vysledek = cislo1 - cislo2
-			elif oeprator == "*":
+			elif (operator == "*"):
 				vysledek = cislo1 * cislo2
-			elif oeprator == "/":
-				if cislo2 == 0:
+			elif (operator == "/"):
+				if (cislo2 == 0):
 					chyba = "Deviding by 0"
-				elif:
-					vysledek = cislo1 / cislo2
 				else:
-					chyba = "Not known operation - check the inputs"
+					vysledek = cislo1 / cislo2
+
 		except:
 			chyba = "Number is unknown!"
-			if chyba:
+			if (chyba):
 				self.vysledekLabel.setText(chyba)
 			else:
 				self.vysledekLabel.setText(str(round(vysledek,3)))
