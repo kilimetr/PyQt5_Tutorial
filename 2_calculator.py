@@ -78,6 +78,8 @@ class Window(QtWidgets.QMainWindow):
 			else:
 				self.vysledekLabel.setText(str(round(vysledek,3)))
 
+		self.vysledekLabel.setText(str(round(vysledek,3)))
+
 
 
 aplikace = QtWidgets.QApplication(sys.argv)
